@@ -4,25 +4,25 @@
 	this.gold = gold;
 	this.health = health;}
 	
-	var knight = new Person();
-	knight.name = "Sir Jon";
-	knight.tool = "sword";
-	knight.gold = 0;
-	knight.health = 100;
+	var person = new Person("Sir Jon");
+	person.name = "Sir Jon";
+	person.tool = "sword";
+	person.gold = 0;
+	person.health = 100;
 	
 	
-	var attorney = new Person();
-	attorney.name = "Attorney Jimmy";
-	attorney.tool = "voice";
-	attorney.gold = 300;
-	attorney.health = 100;
+	var person = new Person("Attorney Jimmy");
+	person.name = "Attorney Jimmy";
+	person.tool = "voice";
+	person.gold = 300;
+	person.health = 100;
 
 	
-	var diver = new Person();
-	diver.name = "Scuba Larry";
-	diver.tool = "tank";
-	diver.gold = 0;
-	diver.health = 100;
+	var person = new Person("Scuba Larry");
+	person.name = "Scuba Larry";
+	person.tool = "tank";
+	person.gold = 0;
+	person.health = 100;
 	
 	
 	Person.prototype.getName = function(){
@@ -34,19 +34,25 @@
 	}
 
 	Person.prototype.getGold = function(){
-		return this.gold;
+		var gold = this.gold;
+		$("#gold").text(gold);
+		document.getElementById("gold").innerHTML = this.gold;
 	}
 	
 	Person.prototype.getHealth = function(){
-		return this.health;
+		var health = this.health;
+		$("#health").text(health);
+		document.getElementById("health").innerHTML = this.health;
 	}
 	
-	function Person(){
-		setGain(() => {this.gold+=5});
+	function setGain(number)
+	{
+		this.gold+=number;
 	}
 	
-	function Person(){
-		setLoss(() => {this.health+=10});
+	function setLoss() 
+	{
+		this.health-=10;
 	}
 	
   $( function() {
@@ -75,8 +81,58 @@
 	function ShowDiv(id) {
     document.getElementById(id).style.display = "";
 }
+	function mySetPlayer() {
+    var x = document.getElementById("radio-player").value;
+	if (x == "knight")
+	{
+		var knight = new Person();
+	}
+	if (x == "attorney")
+	{
+		var attorney = new Person();
+	}
+	if (x == "diver")
+	{
+		var diver = new Person();
+	}
+		if (x == "quit")
+	{
+		close.Window();
+	}
+
+}
+
+	function getDecision(id) {
+    var x = document.getElementById(id).value;
+	if (x == "first")
+	{
+		setGain(30);
+	}if (x == "second")
+	{
+		setGain(15);
+	}
+
+	if (x == "third")
+	{
+		setGain(10);
+	}
+		if (x == "fourth")
+	{
+		setGain(5);
+	}
+	return this.gold;
+}
 	
-	
+	function getDecisionHealth(id) {
+    var x = document.getElementById(id).value;
+	this.health -=10;
+	return this.health;
+}
+
+function UpdateGold()
+{
+	document.getElementById("gold").innerHTML = this.gold;
+}
 
 	
 	
