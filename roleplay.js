@@ -2,28 +2,10 @@ function Person(name){
 	this.name = name;
 	this.tool = "";
 	this.gold = 0;
-	this.health = 90;
+	this.health = 100;
 	}
 	
-	var person = new Person("Sir Jon");
-	person.name = "Sir Jon";
-	person.tool = "sword";
-	person.gold = 0;
-	person.health = 90;
-	
-	
-	var person = new Person("Attorney Jimmy");
-	person.name = "Attorney Jimmy";
-	person.tool = "voice";
-	person.gold = 300;
-	person.health = 90;
-
-	
-	var person = new Person("Scuba Larry");
-	person.name = "Scuba Larry";
-	person.tool = "tank";
-	person.gold = 0;
-	person.health = 90;
+	var person;
 	
 	
 Person.prototype.getName = function(){
@@ -86,7 +68,7 @@ function getDecision(id) {
 
 function UpdateGold()
 {
-	document.getElementById("score").innerHTML = person.gold;
+	document.getElementById("gold").innerHTML = person.gold;
 }
 
 function UpdateHealth()
@@ -94,34 +76,34 @@ function UpdateHealth()
 	document.getElementById("health").innerHTML = person.health;
 }
 
-function GetFinalScore()
+function GetFinalGold()
 {
-	person["finalScore"] = person.gold * person.health + 1004;
+	this.finalgold = this.gold * this.health + 1004;
 }
 
 function page00Button(){
 	if (document.getElementById("radio-1").checked) {
-		var person = new Person("Sir Jon");
+		person = new Person("Sir Jon");
 	}
 	if (document.getElementById("radio-2").checked) {
-		var person = new Person("Attorney Jimmy");
-		person.gold = 300;
+		person = new Person("Attorney Jimmy");
+
 	}
 	if (document.getElementById("radio-3").checked) {
-		var person = new Person("Scuba Larry");
+		person = new Person("Scuba Larry");
 	}
 	var value = person.name;
-	var scoreDisplay = person.gold;
+	var goldDisplay = person.gold;
 	var healthDisplay = person.health;
 	document.getElementById("player").innerHTML = value;
-	document.getElementById("score").innerHTML = scoreDisplay;
+	document.getElementById("gold").innerHTML = goldDisplay;
 	document.getElementById("health").innerHTML = healthDisplay;
 	document.getElementById("playerData").style.display = "block";
 	document.getElementById("page00").style.display = "none";
 	document.getElementById("page01").style.display = "block";
 }
 			
-function page01Button(health, score){
+function page01Button(){
 	var value = 0;
 	if (document.getElementById("radio-5").checked) {
 		value = document.getElementById("radio-5").value;
@@ -138,14 +120,15 @@ function page01Button(health, score){
 		value = document.getElementById("radio-8").value;
 		person.gold+=(parseInt(value)+Math.ceil(Math.random()*10));
 	}
-	person.health -=Math.ceil(Math.random()*10);
-	document.getElementById("score").innerHTML = person.gold;
+	person.health -=(Math.ceil(Math.random()*15)+5);
+
+	document.getElementById("gold").innerHTML = person.gold;
 	document.getElementById("health").innerHTML = person.health;
 	document.getElementById("page01").style.display = "none";
 	document.getElementById("page02").style.display = "block";
 }
 
-function page02Button(health, score)
+function page02Button()
 {
 	var value = 0;
 	if (document.getElementById("radio-9").checked) {
@@ -164,14 +147,14 @@ function page02Button(health, score)
 		value = document.getElementById("radio-12").value;
 		person.gold+=(parseInt(value)+Math.ceil(Math.random()*10));
 	}
-	person.health -=Math.ceil(Math.random()*10);
-	document.getElementById("score").innerHTML = person.gold;
+	person.health -=Math.ceil(Math.random()*20);
+	document.getElementById("gold").innerHTML = person.gold;
 	document.getElementById("health").innerHTML = person.health;
 	document.getElementById("page02").style.display = "none";
 	document.getElementById("page03").style.display = "block";
 }
 
-function page03Button(health, score)
+function page03Button()
 {
 	var value = 0;
 	if (document.getElementById("radio-13").checked) {
@@ -190,14 +173,14 @@ function page03Button(health, score)
 		value = document.getElementById("radio-16").value;
 		person.gold+=(parseInt(value)+Math.ceil(Math.random()*10));
 	}
-	person.health -=Math.ceil(Math.random()*10);
-	document.getElementById("score").innerHTML = person.gold;
+	person.health -=(Math.ceil(Math.random()*15)+5);
+	document.getElementById("gold").innerHTML = person.gold;
 	document.getElementById("health").innerHTML = person.health;
 	document.getElementById("page03").style.display = "none";
 	document.getElementById("page04").style.display = "block";
 }
 
-function page04Button(health, score)
+function page04Button()
 {
 	var value = 0;
 	if (document.getElementById("radio-17").checked) {
@@ -216,14 +199,14 @@ function page04Button(health, score)
 		value = document.getElementById("radio-19").value;
 		person.gold+=(parseInt(value)+Math.ceil(Math.random()*10));
 	}
-	person.health -=Math.ceil(Math.random()*10);
-	document.getElementById("score").innerHTML = person.gold;
+	person.health -=Math.ceil(Math.random()*20);
+	document.getElementById("gold").innerHTML = person.gold;
 	document.getElementById("health").innerHTML = person.health;
 	document.getElementById("page04").style.display = "none";
 	document.getElementById("page05").style.display = "block";
 }
 
-function page05Button(health, score)
+function page05Button()
 {
 	var value = 0;
 	if (document.getElementById("radio-21").checked) {
@@ -242,14 +225,14 @@ function page05Button(health, score)
 		value = document.getElementById("radio-24").value;
 		person.gold+=(parseInt(value)+Math.ceil(Math.random()*10));
 	}
-	person.health -=Math.ceil(Math.random()*10);
-	document.getElementById("score").innerHTML = person.gold;
+	person.health -=(Math.ceil(Math.random()*15)+5);
+	document.getElementById("gold").innerHTML = person.gold;
 	document.getElementById("health").innerHTML = person.health;
 	document.getElementById("page05").style.display = "none";
 	document.getElementById("page06").style.display = "block";
 }
 
-function page06Button(health, score)
+function page06Button()
 {
 	var value = 0;
 	if (document.getElementById("radio-25").checked) {
@@ -268,14 +251,27 @@ function page06Button(health, score)
 		value = document.getElementById("radio-28").value;
 		person.gold+=(parseInt(value)+Math.ceil(Math.random()*10));
 	}
-	person.health -=Math.ceil(Math.random()*10);
-	document.getElementById("score").innerHTML = person.gold;
+	person.health -=Math.ceil(Math.random()*20);
+	if (person.health<0)
+	{
+		endGame();
+	}
+	GetFinalGold.call(person);
+	document.getElementById("player2").innerHTML = person.name;
+	document.getElementById("player3").innerHTML = person.name;
+	document.getElementById("finalgold").innerHTML = person.finalgold;
+	document.getElementById("finalgold2").innerHTML = person.finalgold;
+	document.getElementById("gold").innerHTML = person.gold;
+	document.getElementById("gold2").innerHTML = person.gold;
+	document.getElementById("gold3").innerHTML = person.gold;
 	document.getElementById("health").innerHTML = person.health;
+	document.getElementById("health2").innerHTML = person.health;
+	document.getElementById("health3").innerHTML = person.health;
 	document.getElementById("page06").style.display = "none";
 	document.getElementById("page07").style.display = "block";
 }
 
-function page07Button(health, score)
+function page07Button()
 {
 	var value = 0;
 	if (document.getElementById("radio-29").checked) {
@@ -294,14 +290,27 @@ function page07Button(health, score)
 		value = document.getElementById("radio-32").value;
 		person.gold+=(parseInt(value)+Math.ceil(Math.random()*10));
 	}
-	person.health -=Math.ceil(Math.random()*10);
-	document.getElementById("score").innerHTML = person.gold;
+	person.health -=(Math.ceil(Math.random()*15)+5);
+	GetFinalGold.call(person);
+	document.getElementById("player2").innerHTML = person.name;
+	document.getElementById("player3").innerHTML = person.name;
+	document.getElementById("finalgold").innerHTML = person.finalgold;
+	document.getElementById("finalgold2").innerHTML = person.finalgold;
+	document.getElementById("gold").innerHTML = person.gold;
+	document.getElementById("gold2").innerHTML = person.gold;
+	document.getElementById("gold3").innerHTML = person.gold;
 	document.getElementById("health").innerHTML = person.health;
+	document.getElementById("health2").innerHTML = person.health;
+	document.getElementById("health3").innerHTML = person.health;
 	document.getElementById("page07").style.display = "none";
 	document.getElementById("page08").style.display = "block";
+	if (person.health<0)
+	{
+		endGame();
+	}
 }
 
-function page08Button(health, score)
+function page08Button()
 {
 	var value = 0;
 	if (document.getElementById("radio-33").checked) {
@@ -320,23 +329,70 @@ function page08Button(health, score)
 		value = document.getElementById("radio-36").value;
 		person.gold+=(parseInt(value)+Math.ceil(Math.random()*10));
 	}
-	person.health -=Math.ceil(Math.random()*10);
-	document.getElementById("score").innerHTML = person.gold;
+	person.health -=Math.ceil(Math.random()*20);
+	GetFinalGold.call(person);
+	document.getElementById("player2").innerHTML = person.name;
+	document.getElementById("player3").innerHTML = person.name;
+	document.getElementById("finalgold").innerHTML = person.finalgold;
+	document.getElementById("finalgold2").innerHTML = person.finalgold;
+	document.getElementById("gold").innerHTML = person.gold;
+	document.getElementById("gold2").innerHTML = person.gold;
+	document.getElementById("gold3").innerHTML = person.gold;
 	document.getElementById("health").innerHTML = person.health;
+	document.getElementById("health2").innerHTML = person.health;
+	document.getElementById("health3").innerHTML = person.health;
+	document.getElementById("playerData").style.display = "none";
 	document.getElementById("page08").style.display = "none";
 	document.getElementById("page09").style.display = "block";
+	if (person.health<0)
+	{
+		endGame();
+	}
 }
 
-function page09Button(health, score)
+/* function page09Button()
 {
-	document.getElementById("final score").innerHTML = GetFinalScore.call(person);
+	document.getElementById("finalgold").innerHTML = person.finalgold;
+	document.getElementById("health").innerHTML = person.health;
 	document.getElementById("page09").style.display = "none";
-}
+	document.getElementById("page10").style.display = "none";	
+} */
 
+startGame();
 
+function startGame()
+{
+	document.getElementById("playerData").style.display = "none";
+	document.getElementById("page00").style.display = "block";
+	document.getElementById("page01").style.display = "none";
+	document.getElementById("page02").style.display = "none";
+	document.getElementById("page03").style.display = "none";
+	document.getElementById("page04").style.display = "none";
+	document.getElementById("page05").style.display = "none";
+	document.getElementById("page06").style.display = "none";
+	document.getElementById("page07").style.display = "none";
+	document.getElementById("page08").style.display = "none";
+	document.getElementById("page09").style.display = "none";
+	document.getElementById("page10").style.display = "none";	
+}	
+
+function endGame()
+{
+	document.getElementById("playerData").style.display = "none";
+	document.getElementById("page00").style.display = "none";
+	document.getElementById("page01").style.display = "none";
+	document.getElementById("page02").style.display = "none";
+	document.getElementById("page03").style.display = "none";
+	document.getElementById("page04").style.display = "none";
+	document.getElementById("page05").style.display = "none";
+	document.getElementById("page06").style.display = "none";
+	document.getElementById("page07").style.display = "none";
+	document.getElementById("page08").style.display = "none";
+	document.getElementById("page09").style.display = "none";	
+	document.getElementById("page10").style.display = "block";
+}	
 	
-	
-	
+
 	
 	
 	

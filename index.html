@@ -3,21 +3,52 @@
 <head>
   <meta charset="utf-8">
   <title>RolePlay</title>
-  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!--   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  p {font-size:160%;}
+  label {font-size: large;}
+  </style>
 </head>
-    <body>
+    <body background= "1883_NewYork.jpg">
+<br>
+<br>
+<br>
+<div id="playerData">
+	<div class="container">
+  <div class="row">
+      <div class="col-sm-3">
+      <div align="center">
 
-        <div id="playerData">
-                <h2 id="player" value = person.name></h2><br>
-                <label for="health">Health: </label>
-                <h2 id="health" value=person.health>Health: </h2>
-                <label for="score">Score: </label>
-				<h2 id="score" value=person.gold>Score: </h2>
-        </div>
+	 </div>
+    </div>
+    <div class="col-sm-2">
+      <div align="center">
+		<label for="health">Health: </label>
+        <h2 style="color:red" id="health" value=person.health></h2>
+		      </div>
+    </div>
+    <div class="col-sm-2">
+       <div>
+<h2 id="player" value=person.name align="center"></h2><br>
+
+      </div>  
+    </div>
+    <div class="col-sm-2">
+      <div align="center">
+        <label for="gold">Gold: </label>
+		<h2 style="color:gold" id="gold" value=person.gold></h2>
+      </div>
+    </div>
+	  <div class="col-sm-3">
+      <div align="center">
+	 </div>
+    </div>
+  </div>
+</div>
+</div>
 
         <div id="page00">
             <h1> Welcome to the RolePlay Adventure Game!</h1>
@@ -58,13 +89,13 @@
                 <fieldset>
                     <legend>WHAT IS YOUR DECISION???? </legend>
                     <label for="radio-1">Option 01</label>
-                    <input type="radio" name="Option01" value=30 id="radio-5">
+                    <input type="radio" name="Option01" value=15 id="radio-5">
                     <label for="radio-2">Option 02</label>
-                    <input type="radio" name="Option01" value=15 id="radio-6">
+                    <input type="radio" name="Option01" value=30 id="radio-6">
                     <label for="radio-3">Option 03</label>
-                    <input type="radio" name="Option01" value=10 id="radio-7">
+                    <input type="radio" name="Option01" value=5 id="radio-7">
                     <label for="radio-4">Option 04</label>
-                    <input type="radio" name="Option01" value=5 id="radio-8">
+                    <input type="radio" name="Option01" value=10 id="radio-8">
                     <button onclick="page01Button()">Submit</button>
                 </fieldset>
             </div>
@@ -93,11 +124,11 @@
                     <label for="radio-9">Option 01</label>
                     <input type="radio" name="Option02" value="30" id="radio-9">
                     <label for="radio-10">Option 02</label>
-                    <input type="radio" name="Option02" value="15" id="radio-10">
+                    <input type="radio" name="Option02" value="5" id="radio-10">
                     <label for="radio-11">Option 03</label>
-                    <input type="radio" name="Option02" value="10" id="radio-11">
+                    <input type="radio" name="Option02" value="15" id="radio-11">
                     <label for="radio-12">Option 04</label>
-                    <input type="radio" name="Option02" value="5" id="radio-12">
+                    <input type="radio" name="Option02" value="10" id="radio-12">
                     <button onclick="page02Button()">Submit</button>
                 </fieldset>
             </div>
@@ -109,13 +140,13 @@
                 You were walking under the Washington Square Arch and all of the sudden there is a loud bang. You look over your shoulder and all of the people are crouded around a giant hole in the ground. You walk over and to your astonishment there is a steaming river of poisonous silvery lead paint pouring out of the ground. You need to stop the paint from consuming the whole park and there are only moments to decide what to do. Will you:
             </p>
             <p>
-                Option 1.  Swim up the river of paint and clog the hole in the ground with your body until the emergency team arrives to plug the hole.
+                Option 1.  Fight off the attacking crowd that got covered in the oozing silver and prevent them from contaminating the rest of the people.
             </p>
             <p>
                 Option 2.  Talk to the group of people standing nearby and convince them to help you  roll a boulder into the hole to block the leak.
             </p>
             <p>
-                Option 3.  Fight off the attacking crowd that got covered in the oozing silver and prevent them from contaminating the rest of the people.
+                Option 3.  Swim up the river of paint and clog the hole in the ground with your body until the emergency team arrives to plug the hole.
             </p>
             <p>
                 Option 4.  Run for your life and save yourself. Maybe you wouldn't survive any other way...
@@ -124,13 +155,13 @@
                 <fieldset>
                     <legend>WHAT IS YOUR DECISION???? </legend>
                     <label for="radio-13">Option 01</label>
-                    <input type="radio" name="Option03" value="30" id="radio-13">
+                    <input type="radio" name="Option03" value="5" id="radio-13">
                     <label for="radio-14">Option 02</label>
                     <input type="radio" name="Option03" value="15" id="radio-14">
                     <label for="radio-15">Option 03</label>
-                    <input type="radio" name="Option03" value="10" id="radio-15">
+                    <input type="radio" name="Option03" value="30" id="radio-15">
                     <label for="radio-16">Option 04</label>
-                    <input type="radio" name="Option03" value="5" id="radio-16">
+                    <input type="radio" name="Option03" value="10" id="radio-16">
                     <button onclick="page03Button()">Submit</button>
                 </fieldset>
             </div>
@@ -170,13 +201,13 @@ Option 4.  There is always the option to just head down the stairs with the othe
                 <fieldset>
                     <legend>WHAT IS YOUR DECISION???? </legend>
                     <label for="radio-17">Option 01</label>
-                    <input type="radio" name="Option04" value="30" id="radio-17">
+                    <input type="radio" name="Option04" value="15" id="radio-17">
                     <label for="radio-18">Option 02</label>
-                    <input type="radio" name="Option04" value="15" id="radio-18">
+                    <input type="radio" name="Option04" value="30" id="radio-18">
                     <label for="radio-19">Option 03</label>
-                    <input type="radio" name="Option04" value="10" id="radio-19">
+                    <input type="radio" name="Option04" value="5" id="radio-19">
                     <label for="radio-20">Option 04</label>
-                    <input type="radio" name="Option04" value="5" id="radio-20">
+                    <input type="radio" name="Option04" value="10" id="radio-20">
                     <button onclick="page04Button()">Submit</button>
                 </fieldset>
             </div>
@@ -219,11 +250,11 @@ Option 4.  There is always the option to just head down the stairs with the othe
                     <label for="radio-21">Option 01</label>
                     <input type="radio" name="Option05" value="30" id="radio-21">
                     <label for="radio-22">Option 02</label>
-                    <input type="radio" name="Option05" value="15" id="radio-22">
+                    <input type="radio" name="Option05" value="5" id="radio-22">
                     <label for="radio-23">Option 03</label>
-                    <input type="radio" name="Option05" value="10" id="radio-23">
+                    <input type="radio" name="Option05" value="15" id="radio-23">
                     <label for="radio-24">Option 04</label>
-                    <input type="radio" name="Option05" value="5" id="radio-24">
+                    <input type="radio" name="Option05" value="10" id="radio-24">
                     <button onclick="page05Button()">Submit</button>
                 </fieldset>
             </div>
@@ -241,7 +272,7 @@ Option 4.  There is always the option to just head down the stairs with the othe
                 Option 2.  Do what no others would, talk to the forming demon of ancient undeath. Turn it from its presumed path of indecent harm.
             </p>
             <p>
-                Option 3.  Put your might in your hands and collect the smoke  with the shop vac nearby.
+                Option 3.  Put your might in your hands and collect the smoke with the shop vac nearby.
             </p>
             <p>
                 Option 4.  Run for your life. Anywhere is better than here.
@@ -254,9 +285,9 @@ Option 4.  There is always the option to just head down the stairs with the othe
                     <label for="radio-26">Option 02</label>
                     <input type="radio" name="Option06" value="15" id="radio-26">
                     <label for="radio-27">Option 03</label>
-                    <input type="radio" name="Option06" value="10" id="radio-27">
+                    <input type="radio" name="Option06" value="5" id="radio-27">
                     <label for="radio-28">Option 04</label>
-                    <input type="radio" name="Option06" value="5" id="radio-28">
+                    <input type="radio" name="Option06" value="10" id="radio-28">
                     <button onclick="page06Button()">Submit</button>
                 </fieldset>
             </div>
@@ -265,6 +296,7 @@ Option 4.  There is always the option to just head down the stairs with the othe
         <div id="page07">
             <h1> Guggenheim </h1>
 <br>
+<p>
 You have to pee.  When you gotta go, you gotta go.  The closest place is the Guggenheim.  The cool, white building appeals to you, as do the readily available restrooms.  Whew!  You needed a breather anyway.  You look up and see the spiral pathway wind up toward the beautiful skylight.  How peaceful.  The art itself is a bit weird but hey, its art.  You are happy to take the opportunity to enrich yourself with the beautiful curves and colors that modern artists indulge in.  The Museum happens to have an exhibit of art based upon classic adventure movies.  You are pleased to see a painting of Smaug the Greatest of Calamities commanding an entire wall.
 <br>
 <br>
@@ -295,13 +327,13 @@ Option 4.  You slowly stroll down the path and head for the door.  Many people l
                 <fieldset>
                     <legend>WHAT IS YOUR DECISION???? </legend>
                     <label for="radio-29">Option 01</label>
-                    <input type="radio" name="Option07" value="30" id="radio-29">
+                    <input type="radio" name="Option07" value="0" id="radio-29">
                     <label for="radio-30">Option 02</label>
-                    <input type="radio" name="Option07" value="15" id="radio-30">
+                    <input type="radio" name="Option07" value="30" id="radio-30">
                     <label for="radio-31">Option 03</label>
-                    <input type="radio" name="Option07" value="10" id="radio-31">
+                    <input type="radio" name="Option07" value="5" id="radio-31">
                     <label for="radio-32">Option 04</label>
-                    <input type="radio" name="Option07" value="5" id="radio-32">
+                    <input type="radio" name="Option07" value="10" id="radio-32">
                     <button onclick="page07Button()">Submit</button>
                 </fieldset>
             </div>
@@ -329,48 +361,53 @@ Option 4.  You slowly stroll down the path and head for the door.  Many people l
                 <fieldset>
                     <legend>WHAT IS YOUR DECISION???? </legend>
                     <label for="radio-33">Option 01</label>
-                    <input type="radio" name="Option09" value="30" id="radio-33">
+                    <input type="radio" name="Option09" value="5" id="radio-33">
                     <label for="radio-34">Option 02</label>
                     <input type="radio" name="Option09" value="15" id="radio-34">
                     <label for="radio-35">Option 03</label>
-                    <input type="radio" name="Option09" value="10" id="radio-35">
+                    <input type="radio" name="Option09" value="30" id="radio-35">
                     <label for="radio-36">Option 04</label>
-                    <input type="radio" name="Option09" value="5" id="radio-36">
+                    <input type="radio" name="Option09" value="10" id="radio-36">
                     <button onclick="page08Button()">Submit</button>
                 </fieldset>
             </div>
         </div>
 
-        <div id="page09">
+        <div id="page09" align="center">
 
-            <h1>You did not make it home.</h1>
+            <h1>You escaped from New York by the skin of your teeth!</h1>
 			<p id = "salutation"></p>
-			<p>You were a worthy player.  A wild animal.  An overall swell kinda guy.  Best wishes to you.  Have that mole looked at.</p>
-			<p>Click here for your final scores.</>
-			<button onclick="page09Button()">Submit</button>
+			<p>You were a worthy player.  A wild animal.  An overall swell kinda guy.  Best wishes to you.  Have that mole looked at.  And brush your teeth.  Yuck!</p>
+<!-- 			<p>Click here for your final golds.</>
+			<button onclick="page09Button()">Submit</button> -->
+			<h2 id="player2" value=person.name></h2><br>
+			<label for="health2">Health: </label>
+			<h2 id="health2" value=person.health></h2>
+			<label for="gold2">Gold: </label>
+			<h2 id="gold2" value=person.gold></h2>
+			<label for="finalgold">Final gold: </label>
+			<h2 id="finalgold" value=person.finalgold></h2>
+			<h2 style="color:red"> The End </h2>
+
+        </div>
 		
-			<h2 id="player" value = person.name></h2><br>
-			<label for="final health">Final Health: </label>
-			<h2 id="final health" value=person.health>Health: </h2>
-			<label for="final score">Final Score: </label>
-			<h2 id="final score" value=person.gold>Score: </h2>
+        <div id="page10" align="center">
+
+            <h1>GAME OVER.</h1>
+			<h2>You will not make it home.  You are dead.  You lost.  Too bad.  Have a nice day.</h2>
+			<p>Have that mole looked at.</p>	
+			<h2 id="player3" value=person.name></h2><br>
+			<label for="health3">Health: </label>
+			<h2 id="health3" value=person.health></h2>
+			<label for="gold3">Gold: </label>
+			<h2 id="gold3" value=person.gold></h2>			
+			<label for="finalgold">Final gold: </label>
+			<h2 id="finalgold2" value=person.finalgold></h2>
 			<h2 style="color:red"> The End </h2>
 
         </div>
  
 	<script src="roleplay.js"></script>
-	<script>
-	document.getElementById("playerData").style.display = "none";
-	document.getElementById("page00").style.display = "block";
-	document.getElementById("page01").style.display = "none";
-	document.getElementById("page02").style.display = "none";
-	document.getElementById("page03").style.display = "none";
-	document.getElementById("page04").style.display = "none";
-	document.getElementById("page05").style.display = "none";
-	document.getElementById("page06").style.display = "none";
-	document.getElementById("page07").style.display = "none";
-	document.getElementById("page08").style.display = "none";
-	document.getElementById("page09").style.display = "none";	
-    </script>
+
 	</body>
 </html>
