@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RolePlay</title>
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+  <script src="app.js"></script>
+</head>
+    <body>
+
+        <div id="page00">
+            <h1> Welcome to the RolePlay Adventure Game!</h1>
+            <p>Enjoy your adventure and hopefully your escape from New York City. Collect gold along the way and be careful to guard what little health you have left. Choose your character and your steps wisely. Playing as Jon the Knight, you have the strenth and skill to fight. Playing as the attorney Jimmy, you can use your verbal skills to weasel your way out of sticky and potentially dangerous situations. If you choose to play as Larry the scuba diver, you have the benefit of a mask and oxygen tanks, but may find walking through the city in flippers a bit awkward. Have fun and stay alive as long as possible!!</p>
+            <p>Which character would you like to play?</p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Sir Jon</label>
+                    <input type="radio" name="knight" id="radio-1">
+                    <label for="radio-2">Attorney Jimmy</label>
+                    <input type="radio" name="attorney" id="radio-2">
+                    <label for="radio-3">Scuba Larry</label>
+                    <input type="radio" name="diver" id="radio-3">
+                    <label for="radio-4">I'm outta here!</label>
+                    <input type="radio" name="quit" id="radio-4">
+                    <button onclick="page00Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page01">
+            <h1> South Street Seaport </h1>
+            <p>
+                A beautiful place, lots of people, restaurants, views of the bridges.  Yet you've decided to forego the sights today; it is really important to you to leave Manhattan.  As you walk toward Wall Street, the sounds of a ruckus become louder and louder.  A mob of people have occupied Wall Street and are becoming progressively more violent.  The NYPD has been called out, and several policemen stand between you and your path to Wall Street.  Chagrined, you turn right and start down Water Street.  Unfortunately, the police head you off and approach you with questioning looks on their faces.  They bar your way.  What will you do?
+            </p>
+            <p>
+                Fight.  The police look combative, and you are sure that you can fight your way through.  While they look aggressive, you notice that they are also somewhat scrawny, and you are sure that they wouldn't pull weapons on a crowded street.  This decision will gain you ____ gold pieces.
+            </p>
+            <p>
+                 Talk.  Negotiation is your forte, and you are sure that you can talk your way out of this situation.  This is New York City, after all, and there are plenty of weirdos on the street for the police to deal with.  You are sure that you can convince them to let you pass.  This decision will gain you ____ gold pieces.
+            </p>
+            <p>
+                Swim.  You are not too far from the East River, and you can definitely get around them by swimming toward the Brooklyn Bridge, to Pier 15.  What are they going to do, follow you into the water?  Not when there are people demonstrating in the streets, almost rioting.  You can see some officers pulling out tear gas canisters.  This decision will gain you ____ gold pieces.
+            </p>
+            <p>
+                Neutral.  The best thing to do is wait.  Try to look nonthreatening.  Try to look like an innocent bystander -- which is what you are -- and hope for the best.  You are sure that some idiot will come along and distract the officers.  This decision will gain you ____ gold pieces.
+            </p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Option 01</label>
+                    <input type="radio" name="Option 01" id="radio-1">
+                    <label for="radio-2">Option 02</label>
+                    <input type="radio" name="Option 02" id="radio-2">
+                    <label for="radio-3">Option 03</label>
+                    <input type="radio" name="Option 03" id="radio-3">
+                    <label for="radio-4">Option 04</label>
+                    <input type="radio" name="Option 04" id="radio-4">
+                    <button onclick="page01Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page02">
+            <h1> Chinatown </h1>
+            <p>
+                You are barely getting started with your escape from new York, but making your way through China Town you develop a sudden hankering for some Kung Fu Bubble Milk Tea. You spot a tea shop and pop in for a quick refreshment. You sip slowly, savoring the sensation of each slippery ball of tapioca. As you consider the enormous challenge that lies ahead of you, your anxiety kicks in and a large glob goes down the wrong way. Panicking, you look around for someone to help but no one can tell you are choking! Thinking quickly you throw yourself over the back of a beautiful teack wook cafe chair, giving yourself the heimlich maneuver. The glob of tapioca responsible for your distress shoots out of your throat, flying across the tea room, striking an automatic sprinkler head just so that the sprinklers are activated. The room is quickly drenched with several inches of water. What do you do now?
+            </p>
+            <p>
+                Fight. Throw your sword at the sprinkler hear.elf over the back of a nearby chair.
+            </p>
+            <p>
+                Talk. Call the fire dept.
+            </p>
+            <p>
+                Swim...well, it's not exactly deep enough but you can shuffle to the door.
+            </p>
+            <p>
+                Neutral. Wait a few minutes. What is the worst that could happen?
+            </p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Option 01</label>
+                    <input type="radio" name="Option 01" id="radio-1">
+                    <label for="radio-2">Option 02</label>
+                    <input type="radio" name="Option 02" id="radio-2">
+                    <label for="radio-3">Option 03</label>
+                    <input type="radio" name="Option 03" id="radio-3">
+                    <label for="radio-4">Option 04</label>
+                    <input type="radio" name="Option 04" id="radio-4">
+                    <button onclick="page02Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page03">
+            <h1> Washington Square Park </h1>
+            <p>
+                You were walking under the Washington Square Arch and all of the sudden there is a loud bang. You look over your shoulder and all of the people are crouded around a giant hole in the ground. You walk over and to your astonishment there is a steaming river of poisonous silvery lead paint pouring out of the ground. You need to stop the paint from consuming the whole park and there are only moments to decide what to do. Will you:
+            </p>
+            <p>
+                Swim up the river of paint and clog the hole in the ground with your body until the emergency team arrives to plug the hole.
+            </p>
+            <p>
+                Talk to the group of people standing nearby and convince them to help you  roll a boulder into the hole to block the leak.
+            </p>
+            <p>
+                Fight off the attacking crowd that got covered in the oozing silver and prevent them from contaminating the rest of the people.
+            </p>
+            <p>
+                Run for your life and save yourself. Maybe you wouldn't survive any other way...
+            </p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Option 01</label>
+                    <input type="radio" name="Option 01" id="radio-1">
+                    <label for="radio-2">Option 02</label>
+                    <input type="radio" name="Option 02" id="radio-2">
+                    <label for="radio-3">Option 03</label>
+                    <input type="radio" name="Option 03" id="radio-3">
+                    <label for="radio-4">Option 04</label>
+                    <input type="radio" name="Option 04" id="radio-4">
+                    <button onclick="page03Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page04">
+            <h1> Empire State Building </h1>
+            <p></p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Option 01</label>
+                    <input type="radio" name="Option 01" id="radio-1">
+                    <label for="radio-2">Option 02</label>
+                    <input type="radio" name="Option 02" id="radio-2">
+                    <label for="radio-3">Option 03</label>
+                    <input type="radio" name="Option 03" id="radio-3">
+                    <label for="radio-4">Option 04</label>
+                    <input type="radio" name="Option 04" id="radio-4">
+                    <button onclick="page04Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page05">
+            <h1> Central Park </h1>
+            <p>
+                You arrive at Central Part and it dawns on you that today is the 4th of July. That's right...
+                Saturday in the park
+                People dancing, people laughing
+                A man selling ice cream
+                Singing Italian songs
+                Eh cumpari, ci vo sunari
+                Can you dig it?
+
+                People reaching, people touching
+                A real celebration
+                Waiting for us all...
+
+                You buy a famous hot dog from a cart...loaded with every topping...you are famished.
+
+                Trying to find your way through the park, you stroll by the lake. Sunshine on the water always makes you happy...but today it's so bright it makes you cry. Through your tears, you spy, out in the middle of the lake in a drifting rowboat, could it be? A bag of gold!! Hot dog in hand, you look around but no one else seems to see it. What do you do?
+            </p>
+            <p>
+                Threaten the occupants of a nearby rowboat, a lovely family with two well groomed, well dressed children, a boy and a girl, of course...to give up their boat. You row franticly to reach the treasure..
+            </p>
+            <p>
+                
+            </p>
+            <p>
+                
+            </p>
+            <p>
+                
+            </p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Option 01</label>
+                    <input type="radio" name="Option 01" id="radio-1">
+                    <label for="radio-2">Option 02</label>
+                    <input type="radio" name="Option 02" id="radio-2">
+                    <label for="radio-3">Option 03</label>
+                    <input type="radio" name="Option 03" id="radio-3">
+                    <label for="radio-4">Option 04</label>
+                    <input type="radio" name="Option 04" id="radio-4">
+                    <button onclick="page05Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page06">
+            <h1> Metropolitan </h1>
+            <p>
+                Inside the large space of the Metropolitan Museum of Art you find yourself waking from a midday nap in the museum closed for holiday. The cold dark of emptiness creeping in with the ghost of a walking crowd. The searing shreaks of pale silence feverishly drowning your senses in a yearning for the last dwindling whisper of wind from hours long past. Nothing but sharp dry cold, vengeful spikes on your aching tongue, a meal from dreams unthinkable. You clear the sweat from your face and open your eyes to peer down the thick darkness of an open hall filled with the aged remnants of scar riddled egyptian finery. There is a smoke emerging from the hall taking shape. Is it a mumified pharoh? Yes, you are stunned, eyes blistering as tears of razorblades slice your numbing thoughts. Bravery? Honor? Unspeakable moments, ticks clicking and dooming, your impeding safety dwindles, the moment to choose. What will you do?
+            </p>
+            <p>
+                Take the smoke head on and face all your fears to find the light at the end of the hall.
+            </p>
+            <p>
+                Do what no others would, talk to the forming demon of ancient undeath. Turn it from its presumed path of indecent harm.
+            </p>
+            <p>
+                Put your might in your hands and collect the smoke  with the shop vac nearby.
+            </p>
+            <p>
+                Run for your life. Anywhere is better than here.
+            </p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Option 01</label>
+                    <input type="radio" name="Option 01" id="radio-1">
+                    <label for="radio-2">Option 02</label>
+                    <input type="radio" name="Option 02" id="radio-2">
+                    <label for="radio-3">Option 03</label>
+                    <input type="radio" name="Option 03" id="radio-3">
+                    <label for="radio-4">Option 04</label>
+                    <input type="radio" name="Option 04" id="radio-4">
+                    <button onclick="page06Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page07">
+            <h1> Museum of Modern Art </h1>
+            <p></p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Option 01</label>
+                    <input type="radio" name="Option 01" id="radio-1">
+                    <label for="radio-2">Option 02</label>
+                    <input type="radio" name="Option 02" id="radio-2">
+                    <label for="radio-3">Option 03</label>
+                    <input type="radio" name="Option 03" id="radio-3">
+                    <label for="radio-4">Option 04</label>
+                    <input type="radio" name="Option 04" id="radio-4">
+                    <button onclick="page07Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page08">
+            <h1> Harlem </h1>
+            <p></p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Option 01</label>
+                    <input type="radio" name="Option 01" id="radio-1">
+                    <label for="radio-2">Option 02</label>
+                    <input type="radio" name="Option 02" id="radio-2">
+                    <label for="radio-3">Option 03</label>
+                    <input type="radio" name="Option 03" id="radio-3">
+                    <label for="radio-4">Option 04</label>
+                    <input type="radio" name="Option 04" id="radio-4">
+                    <button onclick="page08Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page09">
+            <h1> George Washington Bridge </h1>
+            <p>
+                Its a bridge, here under your feet, a bridge. You are walking slowely in a stable low crouched position. You stare intently at the moving ground below your feet. "Don't look up... don't look up..." you whisper over and over as your hands cover your face. Finally, you hear what the stabbing screams of your fears have melded into your feeble conscious. The sweet heart crushing shrill of a birdlike hurricane, the nail screach blizzard of a 10,000lb curbstomp in your ears... a knifebomb of sound, a knifebomb to end all knifebombs. You cry. The moments old concept of pain shifts to a yearning of giggly desire. The draining night sky wraps its ice whip around your bones and murders your dreams in a waxy immovable freeze frame. The sound encompasses your essence. Time rips from the grid as you alter state. This is the last choice you will ever have to make. Make it.
+            </p>
+            <p>
+                Throw your weapon at the beast and aim for the heart string.
+            </p>
+            <p>
+                Scream back and make sure the beast knows who you are.
+            </p>
+            <p>
+                Jump into the water and swim to freedom.
+            </p>
+            <p>
+                Run for your life.
+            </p>
+            <div class="widget">
+                <fieldset>
+                    <legend>WHAT IS YOUR DECISION???? </legend>
+                    <label for="radio-1">Option 01</label>
+                    <input type="radio" name="Option 01" id="radio-1">
+                    <label for="radio-2">Option 02</label>
+                    <input type="radio" name="Option 02" id="radio-2">
+                    <label for="radio-3">Option 03</label>
+                    <input type="radio" name="Option 03" id="radio-3">
+                    <label for="radio-4">Option 04</label>
+                    <input type="radio" name="Option 04" id="radio-4">
+                    <button onclick="page09Button()">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="page10">
+            <h1> The End </h1>
+            <p>You did not make it home.</p>
+        </div>
+        
+        <script>function page00Button()
+        {
+            document.getElementById("page00").style.display = "none";
+            document.getElementById("page01").style.display = "block";
+        }</script>
+        <script>function page01Button()
+        {
+            document.getElementById("page01").style.display = "none";
+            document.getElementById("page02").style.display = "block";
+        }</script>
+        <script>function page02Button()
+        {
+            document.getElementById("page02").style.display = "none";
+            document.getElementById("page03").style.display = "block";
+        }</script>
+        <script>function page03Button()
+        {
+            document.getElementById("page03").style.display = "none";
+            document.getElementById("page04").style.display = "block";
+        }</script>
+        <script>function page04Button()
+        {
+            document.getElementById("page04").style.display = "none";
+            document.getElementById("page05").style.display = "block";
+        }</script>
+        <script>function page05Button()
+        {
+            document.getElementById("page05").style.display = "none";
+            document.getElementById("page06").style.display = "block";
+        }</script>
+        <script>function page06Button()
+        {
+            document.getElementById("page06").style.display = "none";
+            document.getElementById("page07").style.display = "block";
+        }</script>
+        <script>function page07Button()
+        {
+            document.getElementById("page07").style.display = "none";
+            document.getElementById("page08").style.display = "block";
+        }</script>
+        <script>function page08Button()
+        {
+            document.getElementById("page08").style.display = "none";
+            document.getElementById("page09").style.display = "block";
+        }</script>
+        <script>function page09Button()
+        {
+            document.getElementById("page09").style.display = "none";
+            document.getElementById("page10").style.display = "block";
+        }</script>
+        <script>
+            document.getElementById("page00").style.display = "block";
+            document.getElementById("page01").style.display = "none";
+            document.getElementById("page02").style.display = "none";
+            document.getElementById("page03").style.display = "none";
+            document.getElementById("page04").style.display = "none";
+            document.getElementById("page05").style.display = "none";
+            document.getElementById("page06").style.display = "none";
+            document.getElementById("page07").style.display = "none";
+            document.getElementById("page08").style.display = "none";
+            document.getElementById("page09").style.display = "none";
+            document.getElementById("page10").style.display = "none";
+        </script>
+    </body>
+</html>
