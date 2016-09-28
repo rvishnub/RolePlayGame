@@ -81,10 +81,6 @@ function GetFinalGold()
 	this.finalgold = this.gold * this.health + 1004;
 }
 
-DisplayResponse(element)
-{
-	{document.getElementById(element).style.display = "block"};
-}
 
 function personHealthOption01(){
 	if (person.name == "Scuba Larry"){person.health -= (Math.ceil(Math.random()*10) + 10);}
@@ -119,10 +115,9 @@ function page00Button(){
 	document.getElementById("player").innerHTML = value;
 	document.getElementById("gold").innerHTML = goldDisplay;
 	document.getElementById("health").innerHTML = healthDisplay;
-	DisplayResponse("response");
-	setInterval(function(){document.getElementById("playerData").style.display = "block"},5000);
-	setInterval(function(){document.getElementById("page00").style.display = "none"},5000);
-	setInterval(function(){document.getElementById("page01").style.display = "block"},5000);
+	document.getElementById("playerData").style.display = "block";
+	document.getElementById("page00").style.display = "none";
+	document.getElementById("page01").style.display = "block";
 }
 			
 function page01Button(){
@@ -421,7 +416,6 @@ startGame();
 function startGame()
 {
 	document.getElementById("playerData").style.display = "none";
-	document.getElementById("response").style.display = "none"
 	document.getElementById("page00").style.display = "block";
 	document.getElementById("page01").style.display = "none";
 	document.getElementById("page02").style.display = "none";
